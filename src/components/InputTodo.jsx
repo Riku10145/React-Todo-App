@@ -24,6 +24,23 @@ export const InputTodo = (props) => {
           padding: 8px;
           margin: 8px;
         }
+        @media (min-width: 480px) {
+          .input-area {
+            width: 500px;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .input-area {
+            width: 600px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .input-area {
+            width: 1000px;
+          }
+        }
       `}</style>
     </>
   );
