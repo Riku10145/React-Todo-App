@@ -25,6 +25,31 @@ export const CompleteTodos = (props) => {
           padding: 8px;
           margin: 8px;
           border-radius: 8px;
+          }
+          
+        .container {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 800px;
+        }
+        
+        @media (min-width: 480px) {
+          .container {
+            flex-direction: row;
+          }
+        }
+        
+        @media (min-width: 768px) {
+          .complete-area {
+            width: 600px;
+          }
+        }
+        
+        @media (min-width: 1024px) {
+          .complete-area {
+            width: 1000px; 
+            }
         }
       `}</style>
     </>

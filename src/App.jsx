@@ -49,11 +49,15 @@ export const App = () => {
         todoText={todoText}
         onChange={onChangeTodoText}
         onClick={onClickAdd}
-        disabled={incompleteTodos.length >= 5}
+        disabled={incompleteTodos.length >= 10}
       />
-      {incompleteTodos.length >= 5 && (
-        <p style={{ color: "red" }}>登録できるtodoは5個までですよ？？</p>
+      {incompleteTodos.length >= 10 && (
+        <p style={{ color: "red" }}>登録できるタスクは10個までです。タスクを削除して下さい。</p>
       )}
+      
+     {/* containerクラス  */}
+    <div className="container">
+      
       {/* 未完了 */}
       <IncompleteTodos
         todos={incompleteTodos}
@@ -62,6 +66,7 @@ export const App = () => {
       />
       {/* 完了 */}
       <CompleteTodos completeTodos={completeTodos} onClickBack={onClickBack} />
+    </div>
     </>
   );
 };
